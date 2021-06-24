@@ -5,14 +5,43 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Project 3 | JavaScript Math</title>
-	</head>
-	<body>
-		<p id="math">
-			<span id="num1">17</span> + <span id="num2">45</span> =
-			<span id="result">?</span>
-		</p>
-		<button onclick="add()">Add</button>
 
 		<script src="./JS/main.js"></script>
+	</head>
+	<body>
+		<div>
+			<p>10 + 50 = <span id="addResult">?</span></p>
+			<button onclick="add()">Add</button>
+		</div>
+
+		<div>
+			<p>50 - 10 = <span id="subResult">?</span></p>
+			<button onclick="subtract()">Subtract</button>
+		</div>
+
+		<div>
+			<p>20 x 50 = <span id="multResult">?</span></p>
+			<button onclick="multiply()">Multiply</button>
+		</div>
+
+		<div>
+			<p>7 / 2 = <span id="moduloResult">?</span></p>
+			<button onclick="modulus()">Modulus</button>
+		</div>
+
+		<div>
+			<p>10++ = <span id="incResult">?</span></p>
+			<button onclick="increment()">Increment</button>
+		</div>
+
+		<div>
+			<p>10-- = <span id="decResult">?</span></p>
+			<button onclick="decrement()">Decrement</button>
+		</div>
+
+		<div>
+			<p id="rando">Here's a random number: <span id="randoResult"></span></p>
+			<button onclick="rando()">Random</button>
+		</div>
 	</body>
 </html>
