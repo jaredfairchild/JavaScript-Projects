@@ -1,9 +1,34 @@
-// Write a function using HTML and JavaScript that utilizes a ternary operation using input from the browser
+// Person constructor
+function Person(name, age) {
+	this.name = name;
+	this.age = age;
+	this.greet = function () {
+		return this.name + " is " + this.age + " years old.";
+	};
+}
 
-// Write a constructor function that uses the “new” and “this” keywords
+// This function is called when the 'Submit' button is clicked
+// It takes input from the screen and creates a Person object
+function makePerson() {
+	var name = document.getElementById("name").value;
+	var age = document.getElementById("age").value;
+	var person = new Person(name, age);
 
-// Create a function to display the results of the constructor function within an HTML element
+	var descPerson = person.greet();
 
-// Write a nested function
+	// Nested function
+	if (oldEnoughToVote(person)) {
+		descPerson += " They are old enough to vote.";
+	} else {
+		descPerson += " They are NOT old enought to vote.";
+	}
 
-// Add comments throughout your JavaScript explaining your code
+	document.getElementById("desc_person").innerHTML = descPerson;
+}
+
+// This function uses a ternary operator
+function oldEnoughToVote(per) {
+	var ofAge;
+	per.age >= 18 ? (ofAge = true) : (ofAge = false); // Ternary operator
+	return ofAge;
+}
