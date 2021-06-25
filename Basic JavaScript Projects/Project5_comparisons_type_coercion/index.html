@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projcet 5 | Type Coercion</title>
+		<script src="./JS/main.js"></script>
+	</head>
+	<body>
+		<p onclick="showVal()">
+			The value of the variable 'num' is <span id="numVal">?</span> <br />
+			The value of the variable 'strNum' is
+			<span id="strNumVal">?</span>
+		</p>
+		<p onclick="showType()">
+			The variable 'num' is a <span id="num">?</span> <br />
+			The variable 'strNum' is a <span id="strNum">?</span>
+		</p>
+		<p onclick="typeCoerce()">
+			Combining 'strNum' and 'num' is <span id="coerce1">?</span><br />
+			And <span id="coerce2">?</span> is a <span id="typeOfCoerce">?</span>
+		</p>
+
+		<p onclick="showEq()">
+			Does 'num' == 'strNum'? <span id="doubEq"></span><br />
+			Does 'num' === 'strNum'? <span id="triEq"></span>
+		</p>
+
+		<p onclick="gtAndlt()">
+			Is 'num' &gt; 'strNum'? <span id="gt"></span><br />
+			Is 'num' &lt; 'strNum'? <span id="lt"></span>
+		</p>
+
+		<p onclick="showLogic()">
+			Is 'num'=='strNum' && 'num'&gt;'strNum'? <span id="and"></span><br />
+			Is 'num'=='strNum' || 'num'&gt;'strNum'? <span id="or"></span><br />
+			What is !true? <span id="not"></span>
+		</p>
+	</body>
+</html>
