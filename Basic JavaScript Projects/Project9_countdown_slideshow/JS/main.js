@@ -16,6 +16,9 @@ var path = "./images/";
 var openImgElement = "<img src=";
 var closeImgElement = ">";
 
+var openH1 = "<h1>";
+var closeH1 = "</h1>";
+
 // countdown() function
 function countdown() {
 	counter = document.getElementById("countdown").value; // Get the value submitted
@@ -36,7 +39,10 @@ function slideshow() {
 	document.getElementById("slideshow").innerHTML = openImgElement.concat(
 		path,
 		pictures[picNumber], // The dictionary element here changes what picture is shown
-		closeImgElement
+		closeImgElement,
+		openH1,
+		counter,
+		closeH1
 	);
 
 	// Decrement the counter
