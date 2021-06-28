@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project 8 | String Methods</title>
+		<script src="./JS/main.js"></script>
+	</head>
+	<body>
+		<form action="" style="margin: 20px; padding: 5px">
+			<label for="name">Name:</label>
+			<input type="text" name="name" id="name" />
+			<label for="bday">Birthday:</label>
+			<input type="date" name="bday" id="bday" />
+			<label for="color">Favorite Color:</label>
+			<input type="color" name="color" id="color" />
+			<label for="number">Click for a Random Number:</label>
+			<input type="text" name="number" id="number" onfocus="fillRando()" />
+			<input type="button" value="Submit" onclick="collectData()" />
+		</form>
+		<p id="presentData"></p>
+	</body>
+
+	<style>
+		#presentData {
+			padding: 10px;
+			margin: 10px;
+			height: 300px;
+			width: 500px;
+		}
+
+		form {
+			width: 200px;
+			margin: 20px;
+			padding: 5px;
+		}
+
+		input {
+			margin-bottom: 10px;
+			width: 100%;
+			display: block;
+		}
+	</style>
+</html>
