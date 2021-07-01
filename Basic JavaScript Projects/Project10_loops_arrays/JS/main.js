@@ -1,5 +1,7 @@
+// person has to be initialized here so that it will be in scope for the whileLoop() and forLoop() functions
 let person;
-// Write a function that utilizes a while loop
+
+// A function that utilizes a while loop
 function whileLoop() {
 	var i = 0;
 	while (i < person.greeting().length) {
@@ -8,14 +10,14 @@ function whileLoop() {
 	}
 }
 
-// Write a function that utilizes a for loop
+// A function that utilizes a for loop
 function forLoop() {
 	for (var i = 0; i < person.greeting().length; i++) {
 		document.getElementById("for").innerHTML = person.greeting().slice(0, i);
 	}
 }
 
-// Write a function that utilizes an array
+// A function that utilizes an array
 function useArray() {
 	var foods = [
 		"tacos",
@@ -28,15 +30,16 @@ function useArray() {
 		"peanut butter and jelly sandwich",
 		"ice cream",
 		"fried eggs",
+		"nachos",
 	];
 
-	var random = Math.floor(Math.random() * 10);
+	var random = Math.floor(Math.random() * foods.length);
 	document.getElementById("array").innerHTML =
 		"Random food: " + foods[random] + "<br>";
 }
 
 function makePerson() {
-	// Create an object using the “let” keyword
+	// The person variable is defined
 	person = {
 		name: document.getElementById("name").value,
 		dob: document.getElementById("dob").value,
