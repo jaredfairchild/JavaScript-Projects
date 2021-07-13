@@ -1,5 +1,6 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgb(0, 0, 182);
 }
 
 h1 {
@@ -7,7 +8,6 @@ h1 {
 }
 
 .container {
-	background-color: rgb(0, 0, 182);
 	color: white;
 	width: 600px;
 	margin: 10px auto;
