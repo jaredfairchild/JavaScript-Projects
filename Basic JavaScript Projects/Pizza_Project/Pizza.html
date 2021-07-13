@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pizza Shop</title>
+		<link rel="stylesheet" href="./Pizza_CSS/Pizza.css" />
+		<script src="./Pizza_JS/Pizza.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Pizza Order</h1>
+			<input
+				type="button"
+				value="Place Order"
+				id="btnOrder"
+				onclick="getReceipt()"
+			/>
+			<form id="frmMenu">
+				<div class="menuLeft">
+					<h3>Size:</h3>
+					<input
+						type="radio"
+						name="Size"
+						class="size"
+						value="Personal Pizza"
+					/>Personal Pizza<br />
+					<input
+						type="radio"
+						name="Size"
+						class="size"
+						value="Small Pizza"
+					/>Small Pizza<br />
+					<input
+						type="radio"
+						name="Size"
+						class="size"
+						value="Medium Pizza"
+					/>Medium Pizza<br />
+					<input
+						type="radio"
+						name="Size"
+						class="size"
+						value="Large Pizza"
+					/>Large Pizza<br />
+					<input
+						type="radio"
+						name="Size"
+						class="size"
+						value="Extra Large Pizza"
+					/>Extra Large Pizza<br />
+				</div>
+				<div class="menuCenter">
+					<h3>Vegies:</h3>
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Mushrooms"
+					/>Mushrooms<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Onions"
+					/>Onions<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Tomatoes"
+					/>Tomatoes<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Olives"
+					/>Olives<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Green Peppers"
+					/>Green Peppers<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Pineapple"
+					/>Pineapple<br />
+				</div>
+				<div class="menuRight">
+					<h3>Meats:</h3>
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Pepperoni"
+					/>Pepperoni<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Sausage"
+					/>Sausage<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Canadian Bacon"
+					/>Canadian Bacon<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Ground Beef"
+					/>Ground Beef<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Anchovy"
+					/>Anchovy<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Chicken"
+					/>Chicken<br />
+					<input
+						type="checkbox"
+						name="Topping"
+						class="toppings"
+						value="Salami"
+					/>Salami<br />
+				</div>
+				<div id="cart">
+					<div class="orderArea" id="order"></div>
+					<div class="orderArea" id="price"></div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
