@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="./CSS/styles.css" />
+
+		<title>Jared Fairchild | Portfolio</title>
+	</head>
+	<body>
+		<!-- NAV BAR -->
+		<ul id="navbar">
+			<li><a href="#slideshow">Slideshow</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#github">GitHub</a></li>
+			<li><a href="#contact" onclick="openForm()" ondblclick="closeForm()">Contact</a></li>
+			<li id="name">Jared Fairchild</li>
+		</ul>
+		<!-- END NAV BAR -->
+
+		<!-- WELCOME BANNER -->
+		<div class="centered centered-text" id="home">
+			<video autoplay muted loop id="Typing_Video">
+				<source src="./images/typing_video.mp4" type="video/mp4" />
+				<!--Display message if video fails to run-->
+				Your browser does not support HTML5 video.
+			</video>
+
+			<h1 class="zoom-hover">Jared Fairchild&nbsp;|&nbsp;Portfolio</h1>
+			<p class="zoom-hover">
+				<q>
+					There are two parts to learning craftsmanship: knowledge and work.
+					<br />
+					You must gain the knowledge of principles, patterns, practices, and
+					heuristics that a craftsman knows, <br />
+					and you must also grind that knowledge into your fingers, eyes, and
+					gut by working hard and practicing.</q
+				>
+				<br />
+				<br />
+				<span id="quoted">Robert C. Martin</span>
+				<span id="title"
+					>Clean Code: A Handbook of Agile Software Craftsmanship</span
+				>
+				<br />
+				<br />
+				My Name is Jared Fairchild. Welcome to my porftolio website. On it, I
+				will tell you about my background and experience.
+				<br />
+
+				Thank you for stopping by and enjoy!
+			</p>
+		</div>
+		<!-- END WELCOME BANNER -->
+
+		<!-- GALLERY SLIDESHOW -->
+		<div id="slideshow">
+			<div id="Slideshow_Background">
+				<div id="Slideshow_Container">
+					<!-- Slide 1 of 6 -->
+					<div class="mySlides fade">
+						<img
+							class="Slideshow_Images"
+							src="./images/self.jpg"
+							alt="Portrait of myself"
+						/>
+						<div class="text">I'm available to assist you on your project!</div>
+					</div>
+					<!-- Slide 2 of 6 -->
+					<div class="mySlides fade">
+						<img
+							class="Slideshow_Images"
+							src="./images/HTML_CSS_and_JavaScript.jpeg"
+							alt="HTML, CSS, and JS logos"
+						/>
+						<div class="text">
+							I am a full-stack software developer,<br />
+							trained in:<br />HTML, CSS, JavaScript,
+						</div>
+					</div>
+					<!-- Slide 3 of 6 -->
+					<div class="mySlides fade">
+						<img
+							class="Slideshow_Images"
+							src="./images/libraries.png"
+							alt="bootstrap and jquery logos"
+						/>
+						<div class="text">popular web development libraries,</div>
+					</div>
+					<!-- Slide 4 of 6 -->
+					<div class="mySlides fade">
+						<img
+							class="Slideshow_Images"
+							src="./images/other_tools.png"
+							alt="Other tools and frameworks"
+						/>
+						<div class="text">
+							as well as other popular tools and frameworks,
+						</div>
+					</div>
+					<!-- Slide 5 of 6 -->
+					<div class="mySlides fade">
+						<img
+							class="Slideshow_Images"
+							src="./images/SQL_and_Database.jpg"
+							alt="SQL logo"
+						/>
+						<div class="text">back end development, databases and SQL.</div>
+					</div>
+					<!-- Slide 6 of 6 -->
+					<div class="mySlides fade">
+						<img
+							class="Slideshow_Images"
+							src="./images/contact_slideshow.jpg"
+							alt="Writing code on laptop"
+						/>
+						<div class="text">
+							<a style="color:white" onclick="openForm()" href="#Contact"
+								>Contact me now!</a
+							>
+						</div>
+					</div>
+					<!-- Previous and next buttons -->
+					<a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="Next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br />
+
+				<!-- Slideshow dots -->
+				<div style="text-align: center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot" onclick="currentSlide(6)"></span>
+				</div>
+			</div>
+		</div>
+
+		<!-- END GALLERY SLIDESHOW -->
+
+		<!-- CONTENT -->
+		<table>
+			<!-- ABOUT -->
+			<tr class="content-row" id="about">
+				<td class="dark">
+					<img
+						class="zoom-hover"
+						src="./images/about.jpg"
+						alt="Glasses in front of computer screens"
+					/>
+				</td>
+				<td class="light">
+					<h2 class="centered-text zoom-hover">ABOUT</h2>
+					<p class="zoom-hover">
+						I am a software developer and I enjoy coding in my free time. I also
+						love going on adventures with my wife and two kids.
+						<br />
+						<br />
+						I am a student of
+						<a href="https://www.learncodinganywhere.com/">The Tech Academy</a
+						>'s JavaScript Developer boot camp; learning and experienced in web
+						technologies and programming languages such as HTML, CSS,
+						JavaScript, SQL and more.
+						<br />
+						<br />
+						In a few months, I will be a full-stack web developer and would love
+						to work with you on your project. <a href="#contact" onclick="openForm()">Contact</a> me
+						now!
+					</p>
+				</td>
+			</tr>
+			<!-- END ABOUT -->
+
+			<!-- GIT HUB -->
+			<tr class="content-row" id="github">
+				<td class="light">
+					<h2 class="centered-text zoom-hover">GITHUB</h2>
+					<p class="zoom-hover centered-text">
+						You can view my coding projects on my GitHub profile here:
+						<br /><br />
+						<a href="https://github.com/jaredfairchild"
+							>Jared Fairchild GitHub</a
+						>
+					</p>
+				</td>
+				<td class="dark">
+					<a href="https://github.com/jaredfairchild">
+						<img
+							id="github-logo"
+							src="./images/GitHub.png"
+							alt="GitHub logo"
+							class="zoom-hover"
+						/>
+					</a>
+				</td>
+			</tr>
+			<!-- END GIT HUB -->
+		</table>
+
+		<!-- CONTACT -->
+		<div id="Contact">
+			<button onclick="openForm()" class="contact-btn">CONTACT</button>
+			<div class="form-popup" id="myForm">
+				<form
+					action="https://formspree.io/f/xrgrkpev"
+					method="post"
+					class="form-container"
+				>
+					<h1 class="centered-text zoom-hover">Contact</h2>
+					<label>Name:</label>
+					<input
+						type="text"
+						name="Name"
+						id="name"
+						placeholder="Please enter your name here"
+					/>
+					<label>Email:</label>
+					<input
+						type="email"
+						name="Email"
+						id="email"
+						placeholder="Please enter your email here"
+					/>
+					<label>Message:</label>
+					<input
+						type="text"
+						name="Message"
+						id="message"
+						placeholder="Please write your message here"
+					/>
+					<button type="submit" class="btn">SUBMIT</button>
+					<button type="button" class="btn cancel" onclick="closeForm()">
+						CLOSE
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- END CONTACT -->
+
+		<!-- END CONTENT -->
+
+		<!-- FOOTER -->
+
+		<footer class="centered-text">
+			<p>jaredfairchild.com&nbsp;|&nbsp;&copy;&nbsp;2021</p>
+		</footer>
+
+		<!-- END FOOTER -->
+
+		<script src="./JS/portfolio.js"></script>
+	</body>
+</html>

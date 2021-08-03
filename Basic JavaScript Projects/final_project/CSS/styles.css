@@ -1,0 +1,479 @@
+/* =========================
+        UTILITY STYLES
+========================= */
+
+/* VARIABLES */
+:root {
+	--light: rgb(200, 200, 200);
+	--dark: rgb(50, 50, 50);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+.dark {
+	background-color: var(--dark);
+}
+
+.light {
+	background-color: var(--light);
+}
+
+img {
+	border-radius: 8px;
+	filter: grayscale(75%);
+}
+
+/* =========================
+        NAV BAR STYLE
+========================= */
+
+#navbar {
+	z-index: 1;
+	overflow: hidden;
+	-webkit-animation: slide-in 5s;
+	animation: slide-in 5s;
+}
+
+@keyframes slide-in {
+	from {
+		left: -100vw;
+	}
+	to {
+		left: 0vw;
+	}
+}
+
+#navbar li {
+	-webkit-animation: fadein 10s;
+	animation: fadein 10s;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--dark);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+li {
+	float: left;
+	text-transform: uppercase;
+}
+
+li#name {
+	color: var(--light);
+	float: right;
+	font-weight: bold;
+	padding: 14px 16px;
+}
+
+li a {
+	display: block;
+	color: var(--light);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #111;
+}
+
+/* =========================
+    WELCOME MESSAGE STYLE
+========================= */
+
+#home {
+	width: 100vw;
+	height: 100vw;
+	margin-top: 75px;
+	background: rgba(0, 0, 0, 0.5);
+	color: var(--light);
+	position: relative;
+	-webkit-animation: dropin 7s;
+	animation: dropin 7s;
+}
+
+#home p {
+	font-size: larger;
+}
+
+@keyframes dropin {
+	from {
+		top: -125vw;
+	}
+	to {
+		top: 0vw;
+	}
+}
+
+video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	z-index: -1;
+	filter: grayscale();
+}
+
+#home h1,
+p {
+	padding: 20px;
+	position: relative;
+}
+
+#quoted {
+	font-weight: bold;
+}
+
+#title {
+	font-style: italic;
+	font-size: initial;
+}
+
+/* =========================
+        CONTENT STYLE
+========================= */
+
+table {
+	width: 100%;
+	color: var(--dark);
+	border-collapse: collapse;
+}
+
+.content-row {
+	width: 100%;
+	left: 0;
+	align-content: center;
+}
+
+.content-row td {
+	width: 50vw;
+	margin: 5px;
+	padding: 5px;
+}
+
+.content-row img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 50%;
+}
+
+#github-logo {
+	max-width: 400px; /* The GitHub logo doesn't look very good when it's too big */
+}
+
+/* =========================
+        FORM STYLE
+========================= */
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.contact-btn {
+	position: fixed;
+	bottom: 1.75vw;
+	right: 1.75vw;
+	width: 25vw;
+	background-color: var(--light);
+	color: var(--dark);
+	border: solid var(--dark);
+	cursor: pointer;
+	-webkit-animation: slideIn 5s;
+	animation: slideIn 5s;
+}
+
+/* movePopup animation moves the button from off the right side of the screen to its fixed location on the viewport */
+@keyframes slideIn {
+	from {
+		right: -40vw;
+	}
+	to {
+		right: 1.75vw;
+	}
+}
+
+@-webkit-keyframes slideIn {
+	from {
+		right: -40vw;
+	}
+	to {
+		right: 1.75vw;
+	}
+}
+
+/* Styling for the contact form */
+.form-popup {
+	border: 3px solid var(--dark); /* Creates a solid light gray border around the contact form */
+	z-index: 8; /* This z-index ensures the contact form shows above all other elements on the page */
+	display: none; /* Set the display to none, we will use JavaScript to show the contact form */
+	position: fixed; /* The form stays in the same location no matter what */
+	bottom: 0.5vw; /* Slightly up from the bottom of the viewport */
+	right: 0.5vw; /* Slightly in from the right side of the viewport */
+}
+
+/* Form styling */
+.form-container {
+	max-width: 49vw; /* Relative sizing of the form container - 49% of the viewport width */
+	padding: 1vw; /* Adds padding between the form-popup and the form-container */
+	background-color: var(--light);
+}
+
+/* Input fields */
+.form-container input[type="text"],
+input[type="email"] {
+	width: 95%; /* The input boxes completely fill the width of the form-container */
+	padding: 0.93vw; /* Adds padding to the input boxes */
+	margin: 0.6vw 0 0.6vw 0; /* Adds space between the input boxes and the labels */
+	border: none; /* Removes the border from the input boxes */
+	background: white; /* Sets the background color of the input boxes */
+	font-size: 1vw; /* Relative font sizing based on the width of the viewport */
+}
+
+/* General styling for all buttons */
+button {
+	font-family: "Trebuchet MS", Optima;
+	letter-spacing: 0.3vw; /* Adds slight spacing between the letters */
+	font-size: 1.5vw; /* Relative sizing of text */
+	font-weight: bold;
+	padding: 1.5vw; /* Adds padding to the text in the button */
+	cursor: pointer; /* Changes the cursor to pointer over button elements */
+	width: 100%; /* Sets the width of the buttons to 100% of their containers */
+	height: auto; /* Allows the height to be resized depending on the content showing */
+}
+
+/* Hover effect for contact and submit buttons */
+button:hover,
+.form-container .btn:hover {
+	color: var(
+		--light
+	); /* This makes the text in the buttons white when hovered over */
+	background-color: var(
+		--dark
+	); /* The background of the button changes to black when hovered over */
+	transition-duration: 1s; /* This makes the transition last 1 second */
+	-webkit-transition-duration: 1s; /* For Safari 4.0-8.0 */
+	border-color: var(
+		--light
+	); /* The border turns silver when the button is hovered over */
+}
+
+/* Submit button */
+.form-container .btn {
+	background-color: var(--light);
+	color: var(--dark);
+	border-color: var(--dark);
+	margin-bottom: 1vh; /* Adds space between the submit button and the close button */
+}
+
+/* Close button */
+.form-container .cancel {
+	background-color: var(--dark);
+	color: var(--light);
+	border-color: gray;
+}
+
+/* Styling for close button on hover */
+.form-container .cancel:hover {
+	color: var(--light);
+	background-color: darkred;
+	transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	border-color: var(--dark);
+}
+
+/* =========================
+        HOVER ZOOM STYLE
+========================= */
+
+h1.zoom-hover:hover,
+h2.zoom-hover:hover {
+	transform: scale(1.25);
+	transition: transform 1.5s;
+}
+
+.zoom-hover:hover {
+	transform: scale(1.05);
+	transition: transform 1.5s;
+}
+
+img:hover {
+	filter: grayscale(5%);
+}
+
+/* =========================
+        FOOTER STYLE
+========================= */
+
+footer {
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+/***** Slideshow Styling *****/
+#Slideshow_Background {
+	background: rgba(
+		255,
+		255,
+		255,
+		0.35
+	); /* This creates a slightly transparent white background that's palced over the video in the background */
+}
+
+.mySlides {
+	display: none; /* This prevents the images from being displayed, we will use JS to display these */
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+	width: 39.5vw; /* Relative sizing of the container for the slidewshow set to 39.5% of the viewport width */
+	height: auto; /* The height of the container is automatically adjusted based on the content it is displaying */
+	padding-top: 4%; /* Adds a small padding to the top of the slideshow container */
+	position: relative; /* This sets the container relative to its normal positioning */
+	margin: auto; /* This will horizontally center the container on the page */
+}
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+	vertical-align: middle; /* This centers the images vertically within the slideshow container */
+	height: auto; /* The height of the images is automatically adjusted based on the content, ie if your images are different sizes, they will display as different sizes */
+	box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75); /* Adds a shadow around the slideshow images */
+	width: 100%; /* The width of the images is automatically adjusted based on the content */
+}
+
+/* Next and previous buttons */
+.Previous,
+.Next {
+	cursor: pointer; /* Changes the mouse to a pointer when the buttons are selected */
+	position: absolute; /* This makes the next and previous buttons positioned relative to the slideshow container */
+	top: 50%; /* This moves the buttons up in the slideshow container */
+	width: auto; /* The width of the buttons is automatically adjusted based on the content */
+	padding: 2vw; /* Adds padding equal to 2% of the viewport width */
+	color: var(--light);
+	font-weight: bold;
+	font-size: 1.5vw;
+	border-radius: 0 3px 3px 0; /* Adds a slightly rounded border on the top and bottom right corners */
+	user-select: none; /* This property makes it so that the user cannot highlight the text */
+	transition: 0.6s ease; /* This specifies the details of the hover transition for these elements */
+}
+
+/* Positioning the next button on the right hand side */
+.Next {
+	right: 0; /* This moves the next button to the right side of the slideshow container */
+	border-radius: 3px 0 0 3px; /* This changes the border radius on the next button to the top and bottom left of the button */
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover,
+.Next:hover {
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.8
+	); /* Makes the background of the arrows a transparent gray color */
+	color: var(--light); /* Makes the arrows white when hovered over */
+}
+
+/* Slideshow text */
+.text {
+	color: var(--light);
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	position: absolute; /* This ensures the text is positioned within the image */
+	bottom: 0; /* This property sets the text at the bottom of the image */
+	width: 100%; /* The element covers the full width of the image */
+	text-align: center; /* The text is center aligned within the image */
+	font-family: Perpetua, Rockwell Extra Bold;
+	letter-spacing: 0.1vw; /* This gives slight spacing between the letters */
+	font-size: 1.5vw; /* Font size is relative to the size of the viewport width */
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.75
+	); /* Gives a slightly transparent black background */
+	font-weight: bold;
+	border-radius: 0px 0px 7px 7px; /* Gives the text background rounded corners on the bottom left and right corners */
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+	cursor: pointer; /* The cursor changes to pointer when hovered over the dots */
+	height: 1vw; /* The dots are sized relative to the viewport width */
+	width: 1vw;
+	margin: 0.25vw; /* adds additional spacing between the dots */
+	background-color: var(--light); /* Makes the dots white */
+	border-radius: 50%; /* Makes the dots circles by rounding each corner */
+	display: inline-block; /* Allows the dots to sit next to eachother rather than on a new line */
+	transition: background-color 0.6s ease; /* When clicked on the dots transition to a different color when clicked or hovered over (the affect is defined below) */
+	z-index: 1; /* This ensures the dots will be displayed above any other elements */
+}
+
+/* Hover effect for slideshow dots */
+.active,
+.dot:hover {
+	background-color: var(
+		--dark
+	); /* Sets the color of the dots when active or hovered over */
+}
+
+/* Fading animation for slideshow */
+.fade {
+	animation-name: fade; /* Fade animation is defined below */
+	animation-duration: 1.5s; /* The animation lasts 1.5 seconds */
+	-webkit-animation-name: fade; /* Same as above for Safari 4.0-8.0 */
+	-webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	} /* Image starts transparent */
+	to {
+		opacity: 1;
+	} /* Image ends opaque */
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	} /* Image starts transparent */
+	to {
+		opacity: 1;
+	} /* Image ends opaque */
+}
+/***** End Slideshow Styling *****/
+
+/***** Contact Form Styling *****/
+
+/***** End of Contact Form Styling *****/
